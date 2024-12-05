@@ -29,8 +29,8 @@ namespace API_Test_UserChangePass.Models
         [MaxLength(300)]
         public string? Email { get; set; }
 
-        [Required]
-        public DateTime RegisterDate { get; set; }
+      
+        public DateTime? RegisterDate { get; set; }
         public bool IsAdmin { get; set; }
 
 

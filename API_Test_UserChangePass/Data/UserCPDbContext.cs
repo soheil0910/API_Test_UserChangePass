@@ -11,12 +11,7 @@ namespace API_Test_UserChangePass.Data
 
         public UserCPDbContext(DbContextOptions<UserCPDbContext> options) : base(options)
         {
-
         }
-
-
-
-
         public DbSet<Userx> Userx { get; set; }
 
 
@@ -31,24 +26,24 @@ namespace API_Test_UserChangePass.Data
           {
               Id = 1,
               UserName = "user1",
-              //PasswordHash = HashPasswordBCrypt.HashPassword("1234"),
-              PasswordHash = "1111",
+              PasswordHash = HashPasswordBCrypt.HashPassword("1234"),
+              //PasswordHash = "1111",
               Password_Test = "1234",
               Email = "soheil0910line@gmail.com",
               IsAdmin = true,
-              RegisterDate = DateTime.Now,
+              RegisterDate = DateTime.UtcNow,
 
 
           }, new Userx()
           {
               Id = 2,
               UserName = "user2",
-              //PasswordHash = HashPasswordBCrypt.HashPassword("1234"),
-              PasswordHash = "1111",
+              PasswordHash = HashPasswordBCrypt.HashPassword("1234"),
+              //PasswordHash = "1111",
               Password_Test = "1234",
               Email = "soheil0910line@gmail.com",
               IsAdmin = false,
-              RegisterDate = DateTime.Now,
+              RegisterDate = DateTime.UtcNow,
 
 
           });

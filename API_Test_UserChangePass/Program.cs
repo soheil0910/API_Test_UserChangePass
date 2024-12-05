@@ -7,21 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 
-#region DataBase
-
-builder.Services.AddDbContext<UserCPDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaltConnection"));
-});
-
-#endregion
-
 
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<UserCPDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaltConnection"));
+});
 
 var app = builder.Build();
 
