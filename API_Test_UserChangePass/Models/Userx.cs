@@ -2,7 +2,7 @@
 
 namespace API_Test_UserChangePass.Models
 {
-    public class User
+    public class Userx
     {
 
 
@@ -16,14 +16,13 @@ namespace API_Test_UserChangePass.Models
         public string UserName { get; set; }
 
         [Required]
-        [MaxLength(50)]
         [DataType(DataType.Password)]
         public string PasswordHash { get; set; }
         
-        [Required]
+     
         [MaxLength(50)]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string? Password_Test { get; set; }
 
 
 

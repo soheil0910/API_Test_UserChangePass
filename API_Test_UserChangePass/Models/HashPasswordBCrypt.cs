@@ -16,3 +16,12 @@ namespace API_Test_UserChangePass.Models
 
     }
 }
+
+
+
+////استفاده
+//string plainPassword = "YourPassword123";
+//string hashedPassword = HashPasswordBCrypt.HashPassword(plainPassword);
+
+//// ذخیره hashedPassword در دیتابیس
+//Console.WriteLine("Hashed Password: " + hashedPassword);

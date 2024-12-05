@@ -9,9 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 #region DataBase
 
-builder.Services.AddDbContext<UserCP_DbContext>(options =>
+builder.Services.AddDbContext<UserCPDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaltConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaltConnection"));
 });
 
 #endregion
