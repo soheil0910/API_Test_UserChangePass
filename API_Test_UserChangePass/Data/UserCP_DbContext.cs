@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using API_Test_UserChangePass.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace API_Test_UserChangePass.Data
@@ -17,7 +18,7 @@ namespace API_Test_UserChangePass.Data
         }
 
 
-        //public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
 
 
