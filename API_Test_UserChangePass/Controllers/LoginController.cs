@@ -1,20 +1,36 @@
 ﻿using API_Test_UserChangePass.Models;
+using API_Test_UserChangePass.Repositories;
+using API_Test_UserChangePass.Utility;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace API_Test_UserChangePass.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
+
     public class LoginController : ControllerBase
     {
-        // GET: api/<LoginController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+
+        private IRepositories _repositories;
+
+        public LoginController(IRepositories repositories)
         {
+            _repositories=repositories;
+        }
+
+        // GET: api/<LoginController>
+        [HttpPost("Login")]
+        public IActionResult Login([FromBody] UserModel user)
+        {
+
            
-                return new string[] {  };
+
+            
+        
+
+            return Ok(_repositories.GetToken(user));
 
 
         }

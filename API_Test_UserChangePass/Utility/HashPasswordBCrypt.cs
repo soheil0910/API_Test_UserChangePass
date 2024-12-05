@@ -1,5 +1,4 @@
-﻿
-namespace API_Test_UserChangePass.Models
+﻿namespace API_Test_UserChangePass.Utility
 {
     public static class HashPasswordBCrypt
     {
@@ -16,7 +15,7 @@ namespace API_Test_UserChangePass.Models
 
     }
 }
- //////////// < PackageReference Include = "BCrypt.Net-Next" Version = "4.0.3" />
+//////////// < PackageReference Include = "BCrypt.Net-Next" Version = "4.0.3" />
 
 
 ////استفاده

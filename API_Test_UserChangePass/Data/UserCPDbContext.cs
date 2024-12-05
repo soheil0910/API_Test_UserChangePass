@@ -1,4 +1,5 @@
 ﻿using API_Test_UserChangePass.Models;
+using API_Test_UserChangePass.Utility;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -26,8 +27,7 @@ namespace API_Test_UserChangePass.Data
           {
               Id = 1,
               UserName = "user1",
-              PasswordHash = HashPasswordBCrypt.HashPassword("1234"),
-              //PasswordHash = "1111",
+              PasswordHash = HashPasswordBCrypt.HashPassword("1234"),        
               Password_Test = "1234",
               Email = "soheil0910line@gmail.com",
               IsAdmin = true,
@@ -38,8 +38,7 @@ namespace API_Test_UserChangePass.Data
           {
               Id = 2,
               UserName = "user2",
-              PasswordHash = HashPasswordBCrypt.HashPassword("1234"),
-              //PasswordHash = "1111",
+              PasswordHash = HashPasswordBCrypt.HashPassword("1234"),      
               Password_Test = "1234",
               Email = "soheil0910line@gmail.com",
               IsAdmin = false,
