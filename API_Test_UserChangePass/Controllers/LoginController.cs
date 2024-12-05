@@ -23,16 +23,8 @@ namespace API_Test_UserChangePass.Controllers
         // GET: api/<LoginController>
         [HttpPost("Login")]
         public IActionResult Login([FromBody] UserModel user)
-        {
-
-           
-
-            
-        
-
+        {      
             return Ok(_repositories.GetToken(user));
-
-
         }
 
         // GET api/<LoginController>/5
