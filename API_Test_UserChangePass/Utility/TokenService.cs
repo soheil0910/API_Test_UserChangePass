@@ -21,7 +21,7 @@ namespace API_Test_UserChangePass.Utility
         {
             var claims = new[]
             {
-            new Claim(JwtRegisteredClaimNames.Sub, username),
+            new Claim("UserName", username),
             new Claim(JwtRegisteredClaimNames.Email, Email),
             new Claim("RegisterDate", RegisterDate),
             new Claim("IsAdmin", IsAdmin),

@@ -1,4 +1,5 @@
 using API_Test_UserChangePass.Data;
+using API_Test_UserChangePass.Models;
 using API_Test_UserChangePass.Repositories;
 using API_Test_UserChangePass.Utility;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,15 +19,18 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddScoped<IRepositories, Repositorie>();
+builder.Services.AddScoped<ResponseModel>();
+
+
+#region DataBase
 
 builder.Services.AddDbContext<UserCPDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaltConnection"));
 });
-
-
-
+#endregion
 
 #region Jwt
 
