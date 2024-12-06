@@ -15,11 +15,12 @@ namespace API_Test_UserChangePass.Repositories
 
         private UserCPDbContext _DbContext;
         private readonly TokenService _tokService;
-        public Repositorie(UserCPDbContext DbContext, TokenService tokService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public Repositorie(UserCPDbContext DbContext, TokenService tokService, IHttpContextAccessor httpContextAccessor)
         {
             _DbContext = DbContext;
             _tokService = tokService;
-
+            _httpContextAccessor = httpContextAccessor;
         }
         #endregion
 
@@ -77,11 +78,10 @@ namespace API_Test_UserChangePass.Repositories
 
 
 
-        public ResponseModel ChengPass(ResponseModel response, UserModelnull users, ClaimsPrincipal claims)
+        public ResponseModel ChengPass(ResponseModel response, UserModelnull users)
         {
-
-            var RequestingUser = claims.FindFirst("UserName")?.Value;
-            var RequestingUserIsAdmin = claims.FindFirst("IsAdmin")?.Value;
+            var RequestingUser = _httpContextAccessor.HttpContext?.User.FindFirst("UserName")?.Value;
+            var RequestingUserIsAdmin = _httpContextAccessor.HttpContext?.User.FindFirst("IsAdmin")?.Value;
 
             try
             {

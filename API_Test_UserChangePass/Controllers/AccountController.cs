@@ -41,7 +41,7 @@ namespace API_Test_UserChangePass.Controllers
         [HttpPost("ChengPass")]
         public IActionResult ChengPass([FromBody] UserModelnull user1)
         {
-            _responseModel = _repositories.ChengPass(_responseModel, user1, User);
+            _responseModel = _repositories.ChengPass(_responseModel, user1);
             return StatusCode(_responseModel.Status, _responseModel);
         }
 

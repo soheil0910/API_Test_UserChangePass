@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IRepositories, Repositorie>();
 builder.Services.AddScoped<ResponseModel>();
-
+builder.Services.AddHttpContextAccessor();
 
 #region DataBase
 
