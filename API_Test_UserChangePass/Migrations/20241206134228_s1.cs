@@ -37,8 +37,8 @@ namespace API_Test_UserChangePass.Migrations
                 columns: new[] { "Id", "Email", "IsAdmin", "PasswordHash", "Password_Test", "RegisterDate", "UserName" },
                 values: new object[,]
                 {
-                    { 1, "soheil0910line@gmail.com", true, "$2a$11$SWZC84MZkrjYI61VtgC8o..zdszlCLc2Y3ZhDR1laLe7/byx/8cvu", "1234", new DateTime(2024, 12, 5, 20, 25, 8, 724, DateTimeKind.Utc).AddTicks(2606), "user1" },
-                    { 2, "soheil0910line@gmail.com", false, "$2a$11$dWABLpG6p/EdRb1m4Rt//u9rphFpYZjScCpVu/0vg5Ipu9aSU6by6", "1234", new DateTime(2024, 12, 5, 20, 25, 8, 956, DateTimeKind.Utc).AddTicks(953), "user2" }
+                    { 1, "soheil0910line@gmail.com", true, "$2a$11$GnollM3pFs6N7hMuIK3uZ.1CHNnUYQcru0CxM6SRxoM974aIE1UmS", "1234", new DateTime(2024, 12, 6, 13, 42, 27, 743, DateTimeKind.Utc).AddTicks(83), "user1" },
+                    { 2, "soheil0910line@gmail.com", false, "$2a$11$qI2Jf5WkueA/8V1py0iUP.5bhlWPrckwzrQfOc4qNF5kHigU2qMTm", "1234", new DateTime(2024, 12, 6, 13, 42, 28, 4, DateTimeKind.Utc).AddTicks(4370), "user2" }
                 });
         }
 

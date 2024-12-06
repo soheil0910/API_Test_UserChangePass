@@ -63,9 +63,9 @@ namespace API_Test_UserChangePass.Migrations
                             Id = 1,
                             Email = "soheil0910line@gmail.com",
                             IsAdmin = true,
-                            PasswordHash = "$2a$11$SWZC84MZkrjYI61VtgC8o..zdszlCLc2Y3ZhDR1laLe7/byx/8cvu",
+                            PasswordHash = "$2a$11$GnollM3pFs6N7hMuIK3uZ.1CHNnUYQcru0CxM6SRxoM974aIE1UmS",
                             Password_Test = "1234",
-                            RegisterDate = new DateTime(2024, 12, 5, 20, 25, 8, 724, DateTimeKind.Utc).AddTicks(2606),
+                            RegisterDate = new DateTime(2024, 12, 6, 13, 42, 27, 743, DateTimeKind.Utc).AddTicks(83),
                             UserName = "user1"
                         },
                         new
@@ -73,9 +73,9 @@ namespace API_Test_UserChangePass.Migrations
                             Id = 2,
                             Email = "soheil0910line@gmail.com",
                             IsAdmin = false,
-                            PasswordHash = "$2a$11$dWABLpG6p/EdRb1m4Rt//u9rphFpYZjScCpVu/0vg5Ipu9aSU6by6",
+                            PasswordHash = "$2a$11$qI2Jf5WkueA/8V1py0iUP.5bhlWPrckwzrQfOc4qNF5kHigU2qMTm",
                             Password_Test = "1234",
-                            RegisterDate = new DateTime(2024, 12, 5, 20, 25, 8, 956, DateTimeKind.Utc).AddTicks(953),
+                            RegisterDate = new DateTime(2024, 12, 6, 13, 42, 28, 4, DateTimeKind.Utc).AddTicks(4370),
                             UserName = "user2"
                         });
                 });
