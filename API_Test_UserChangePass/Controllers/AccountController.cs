@@ -32,8 +32,23 @@ namespace API_Test_UserChangePass.Controllers
         [HttpPost("Login")]
         public IActionResult Login([FromBody] UserModel user)
         {
-            _responseModel = _repositories.GetToken(_responseModel, user);
-            return StatusCode(_responseModel.Status, _responseModel);
+
+
+            try
+            {
+                
+                _responseModel = _repositories.GetToken(_responseModel, user);
+                return StatusCode(_responseModel.Status, _responseModel);
+            }
+            catch (Exception ex)
+            {
+                //جایگذین لاگر
+                Console.WriteLine(ex.Message);
+                Console.WriteLine();
+                Console.WriteLine(ex);
+
+                return BadRequest("خطایی رخ داده است");
+            }
         }
 
 
@@ -41,8 +56,24 @@ namespace API_Test_UserChangePass.Controllers
         [HttpPost("ChengPass")]
         public IActionResult ChengPass([FromBody] UserModelnull user1)
         {
-            _responseModel = _repositories.ChengPass(_responseModel, user1);
-            return StatusCode(_responseModel.Status, _responseModel);
+
+            try
+            {
+
+                _responseModel = _repositories.ChengPass(_responseModel, user1);
+                return StatusCode(_responseModel.Status, _responseModel);
+
+            }
+            catch (Exception ex)
+            {
+                //جایگذین لاگر
+                Console.WriteLine(ex.Message);
+                Console.WriteLine();
+                Console.WriteLine(ex);
+
+                return BadRequest("خطایی رخ داده است");
+            }
+
         }
 
 

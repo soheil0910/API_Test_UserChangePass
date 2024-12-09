@@ -32,6 +32,7 @@ namespace API_Test_UserChangePass.Repositories
 
             try
             {
+               
                 var user = _DbContext.Userx.SingleOrDefault(p => p.UserName == users.UserName);
                 if (!(user == null))
                 {
@@ -64,7 +65,8 @@ namespace API_Test_UserChangePass.Repositories
                 response.Status = 500;
                 response.Title = "خطا";
                 response.Description = "درخواست شما به درستی انجام نشد لطفا مجددا تلاش نمایید";
-                response.value = mess.Message;
+                Console.WriteLine(mess.Message);
+               
             }
             return response;
 
@@ -134,14 +136,25 @@ namespace API_Test_UserChangePass.Repositories
                         }
                         else
                         {
-                            throw new InvalidOperationException("شما ادمین نیستین");
+
+                            response.Status = 400;
+                            response.Title = "ناموفق";
+                            response.Description = "شما دست رسی لازم را ندارید";
+                            response.value = "شما ادمین نیستین";
+                           
 
                         }
                     }
                 }
                 else
                 {
-                    throw new InvalidOperationException("خطابی رخ داده است ");
+                    response.Status = 400;
+                    response.Title = "ناموفق";
+                    response.Description = "خطابی رخ داده است ";
+                    response.value = "خطابی رخ داده است ";
+
+
+           
                 }
             }
             catch (Exception mess)
